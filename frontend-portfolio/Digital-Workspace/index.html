@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Workspace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Workspace</h2>
+    <ul id="pageList"></ul>
+
+    <button id="newPage">+ New Page</button>
+    <button id="toggleTheme">🌙 Dark Mode</button>
+  </div>
+
+  <!-- Editor -->
+  <div class="editor">
+    <div class="top-bar">
+      <input type="text" id="pageTitle" placeholder="Page title">
+      <div class="time-widgets">
+        <div class="widget timer-widget">
+          <div id="timerDisplay">00:00:00</div>
+          <div class="timer-controls">
+            <button id="startTimer">Start</button>
+            <button id="pauseTimer">Pause</button>
+            <button id="resetTimer">Reset</button>
+          </div>
+          <input type="number" id="timerInput" placeholder="Minutes" min="1" max="999">
+        </div>
+        <div class="widget stats-widget">
+          <h4>Today's Stats</h4>
+          <p>⏱️ Time Tracked: <span id="totalTimeTracked">0h 0m</span></p>
+          <p>✅ Tasks Done: <span id="tasksCompleted">0</span></p>
+        </div>
+      </div>
+    </div>
+    <div id="content" class="content" contenteditable="true"></div>
+    <div class="button-group">
+      <button id="addTodo">+ Add To-Do</button>
+      <button id="addTimer">⏱️ Add Timer Block</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

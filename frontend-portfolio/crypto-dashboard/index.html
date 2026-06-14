@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2 class="logo">Crypto<span>Dash</span></h2>
+    <ul class="menu">
+        <li class="active">Dashboard</li>
+        <li>Markets</li>
+        <li>Portfolio</li>
+        <li>Transactions</li>
+        <li>Settings</li>
+    </ul>
+    <button id="modeToggle" class="toggle-btn">🌙</button>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Dashboard</h1>
+        <input type="search" id="searchBar" placeholder="Search currency...">
+    </header>
+
+    <!-- LIVE STATS -->
+    <section class="stats" id="statsCards">
+        <!-- JS will fill these -->
+    </section>
+
+    <!-- CHART SECTION -->
+    <section class="chart-section">
+        <h2>Bitcoin Price (24h)</h2>
+        <canvas id="btcChart"></canvas>
+    </section>
+
+    <!-- NEWS SECTION -->
+    <section class="news">
+        <h2>Crypto News</h2>
+        <div class="news-container" id="newsFeed">
+            <!-- JS loads news -->
+        </div>
+    </section>
+
+    <!-- MARKET TABLE -->
+    <section class="table-section">
+        <h2>Market Overview</h2>
+        <table id="marketTable">
+            <tr>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>24h Change</th>
+                <th>Market Cap</th>
+            </tr>
+        </table>
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
